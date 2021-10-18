@@ -1,3 +1,11 @@
+/**
+ * Student Id       : 301209947, 301138662
+ * Student Name     : Keshav Dulal, Aishwarya Shrestha
+ * Course           : MAPD 711 - Samsung Android App Development
+ * Submission Date  : 10/18/2021
+ * Exercise Number  : A2 - Cruise Booking App
+ */
+
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import android.content.Intent
@@ -19,6 +27,12 @@ class payment : AppCompatActivity() {
         val cardExpiryET = findViewById<EditText>(R.id.cardExpiryET)
         val cardTypeET = findViewById<EditText>(R.id.cardTypeET)
 
+        // Collect data from intent object
+        val intent = intent
+        val destination = intent.getStringExtra("destination")
+        val totalGuests = intent.getStringExtra("totalGuests")
+        val totalPrice = intent.getStringExtra("totalPrice")
+
 
         // Add clickListener to button
         continueBtn.setOnClickListener {
@@ -30,9 +44,14 @@ class payment : AppCompatActivity() {
 
             // Initialize intent object to pass data
             val myIntentObject = Intent(this@payment, CustomerInfo::class.java)
+            // todo: remove these 3
             myIntentObject.putExtra("cardNumber", cardNumber)
             myIntentObject.putExtra("cardExpiry", cardExpiry)
             myIntentObject.putExtra("cardType", cardType)
+
+            myIntentObject.putExtra("destination", destination)
+            myIntentObject.putExtra("totalGuests", totalGuests)
+            myIntentObject.putExtra("totalPrice", totalPrice)
 
             // Send intent object to TravellersCounter Activity
             startActivity(myIntentObject)

@@ -1,3 +1,10 @@
+/**
+ * Student Id       : 301209947, 301138662
+ * Student Name     : Keshav Dulal, Aishwarya Shrestha
+ * Course           : MAPD 711 - Samsung Android App Development
+ * Submission Date  : 10/18/2021
+ * Exercise Number  : A2 - Cruise Booking App
+ */
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import android.content.Intent
@@ -10,6 +17,12 @@ class CustomerInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_info)
+
+        // Collect data from intent object
+        val intent = intent
+        val destination = intent.getStringExtra("destination")
+        val totalGuests = intent.getStringExtra("totalGuests")
+        val totalPrice = intent.getStringExtra("totalPrice")
 
         // Store EditText field's references
         val fullNameET = findViewById<EditText>(R.id.fullNameET)
@@ -46,6 +59,11 @@ class CustomerInfo : AppCompatActivity() {
             myIntentObject.putExtra("postalCode",postalCode)
             myIntentObject.putExtra("telephone",telephone)
             myIntentObject.putExtra("email",email)
+
+            // from previous activity screen
+            myIntentObject.putExtra("destination", destination)
+            myIntentObject.putExtra("totalGuests", totalGuests)
+            myIntentObject.putExtra("totalPrice", totalPrice)
 
             // Send intent object to  SecondActivity
             startActivity(myIntentObject)

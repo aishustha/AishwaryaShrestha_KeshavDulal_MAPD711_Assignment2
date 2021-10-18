@@ -1,3 +1,11 @@
+/**
+ * Student Id       : 301209947, 301138662
+ * Student Name     : Keshav Dulal, Aishwarya Shrestha
+ * Course           : MAPD 711 - Samsung Android App Development
+ * Submission Date  : 10/18/2021
+ * Exercise Number  : A2 - Cruise Booking App
+ */
+
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import android.content.Intent
@@ -23,14 +31,22 @@ class Summary : AppCompatActivity() {
         //        isStarBooked
         val kidCount = intent.getStringExtra("kidCount")
         val adultCount = intent.getStringExtra("adultCount")
+        val totalGuests = (adultCount?.toInt()?.let { kidCount?.toInt()?.plus(it) })
+        val totalPrice = ((kidCount?.toInt()?.times(750) ?: 0 ) + (adultCount?.toInt()?.times(1000)!!)?:0 )
+
+        var destination=""
+//        if(isBahamasBooked == true){
+//            destination += "Bahamas "
+//        }
+//        when (isBahamasBooked) {
+//            true -> destination += "Bahamas "
+//        }
 
         val summaryDetailsTV = findViewById<TextView>(R.id.summaryDetailsTV)
         summaryDetailsTV.text = "isBahamasBooked:" + isBahamasBooked.toString() +"\n" +
-
                 "Kids:"+kidCount+ "\n"+
                 "Adults:"+adultCount+ "\n"+
-                "Grand Total: $"+ (kidCount?.toInt()?.times(500) ?: 0) + (adultCount?.toInt()?.times(1000)
-            ?:0 )
+                "Grand Total: $"+ totalPrice
 
         // Locate Continue Button
         val continueBtn = findViewById<Button>(R.id.paymentSummaryContinueBtn)
@@ -42,6 +58,9 @@ class Summary : AppCompatActivity() {
 //            myIntentObject.putExtra("adultCount", adultCount)
 //            myIntentObject.putExtra("kidCount", kidCount)
 //            myIntentObject.putExtra("isSeniorPresent", isSeniorPresent)
+            myIntentObject.putExtra("destination", destination)
+            myIntentObject.putExtra("totalGuests", totalGuests)
+            myIntentObject.putExtra("totalPrice", totalPrice)
 
             // Send intent object to TravellersCounter Activity
             startActivity(myIntentObject)

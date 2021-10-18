@@ -1,3 +1,11 @@
+/**
+ * Student Id       : 301209947, 301138662
+ * Student Name     : Keshav Dulal, Aishwarya Shrestha
+ * Course           : MAPD 711 - Samsung Android App Development
+ * Submission Date  : 10/18/2021
+ * Exercise Number  : A2 - Cruise Booking App
+ */
+
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import android.content.Intent

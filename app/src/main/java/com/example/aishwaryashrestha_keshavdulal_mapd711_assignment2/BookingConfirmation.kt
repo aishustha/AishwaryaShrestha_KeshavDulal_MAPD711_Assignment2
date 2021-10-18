@@ -1,3 +1,10 @@
+/**
+ * Student Id       : 301209947, 301138662
+ * Student Name     : Keshav Dulal, Aishwarya Shrestha
+ * Course           : MAPD 711 - Samsung Android App Development
+ * Submission Date  : 10/18/2021
+ * Exercise Number  : A2 - Cruise Booking App
+ */
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +28,10 @@ class BookingConfirmation : AppCompatActivity() {
         val telephone = intent.getStringExtra("telephone")
         val email = intent.getStringExtra("email")
 
+        val destination = intent.getStringExtra("destination")
+        val totalGuests = intent.getStringExtra("totalGuests")
+        val totalPrice = intent.getStringExtra("totalPrice")
+
         // Display the results in a single textview
         val confirmationDetailsTV = findViewById<TextView>(R.id.confirmationDetailsTV)
 
@@ -29,10 +40,10 @@ class BookingConfirmation : AppCompatActivity() {
             "Customer Name: "+fullName + "\n" +
             "Customer Address: " +address+ "\n" +
             "City and Country: "+ city + country  + "\n"
-//            "Visiting Places: " + cruiseDestinations+  "\n" +
-//            "Number of Guests: " +totalGuests+  "\n" +
+            "Visiting Places: " + destination+  "\n" +
+            "Number of Guests: " +totalGuests+  "\n" +
+            "Price: " +totalPrice+  "\n"
 //            "Number of Nights: " +totalNights+  "\n"
-//            "Price: " +totalprice+  "\n"
 
 //        # Info to display #
 //        Customer Name:
