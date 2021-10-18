@@ -41,7 +41,7 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
-        <item>9</item>
+        <item>9</item><!---->
         <item>10</item>
     </string-array>
 
@@ -69,29 +69,27 @@
     <!--  Customer Information  -->
     <string name="customer_info_title">Customer Info</string>
     <string name="customer_info_subtitle">Please enter your information</string>
+    <string name="customer_info_submitBtn_text">Review</string>
 
     <string name="full_name">Full Name</string>
     <string name="address">Address</string>
     <string name="city">City</string>
-    <string name="country">Hobby</string>
+    <string name="country">Country</string>
     <string name="postal_code">Postal Code</string>
-    <string name="Telephone">Telephone No</string>
+    <string name="telephone">Telephone No</string>
     <string name="email">Email</string>
 
     <!--  Booking Confirmation Screen  -->
-    <string name="customer_name">Customer Name:</string>
-    <string name="customer_address">Customer Address:</string>
-    <string name="city_and_country">City and Country:</string>
-    <string name="cruise_type">Type of Cruise:</string>
-    <string name="visiting_place">Visiting Place:</string>
-    <string name="no_of_guests">Number of Guests:</string>
-    <string name="no_of_nights">Number of Nights:</string>
-    <string name="price">Price:</string>
+<!--    <string name="customer_name">Customer Name:</string>-->
+<!--    <string name="customer_address">Customer Address:</string>-->
+<!--    <string name="city_and_country">City and Country:</string>-->
+<!--    <string name="cruise_type">Type of Cruise:</string>-->
+<!--    <string name="visiting_place">Visiting Place:</string>-->
+<!--    <string name="no_of_guests">Number of Guests:</string>-->
+<!--    <string name="no_of_nights">Number of Nights:</string>-->
+<!--    <string name="price">Price:</string>-->
 
     <string name="confirmation_message">Thank you for your online reservation. Relax and Enjoy Your Cruise!</string>
-
-
-
 
 
 </resources>

@@ -3,6 +3,7 @@ package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import com.google.android.material.snackbar.Snackbar
@@ -20,6 +21,45 @@ class MainActivity2 : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMain2Binding
+
+    var isBahamasBooked:Boolean=false
+    var isCaribbeanBooked:Boolean=false
+    var isCubaBooked:Boolean=false
+    var isSamplerBooked:Boolean=false
+    var isStarBooked:Boolean=false
+
+    public fun onCheckboxClicked(view: View) {
+        if (view is CheckBox) {
+            val checked: Boolean = view.isChecked
+
+                when (view.id) {
+                R.id.bahamasCheckBox -> {
+                    if (checked) {
+                        isBahamasBooked=true
+                    }
+                }
+                R.id.caribbeanCheckBox -> {
+                    if (checked) {
+                        isCaribbeanBooked=true
+                    }
+                }
+                R.id.cubaCheckBox -> {
+                    if (checked) {
+                        isCubaBooked=true
+                    }
+                }
+                R.id.samplerCheckBox -> {
+                    if (checked) {
+                        isSamplerBooked=true
+                    }
+                } R.id.starCheckBox -> {
+                    if (checked) {
+                        isStarBooked=true
+                    }
+                }
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,25 +91,16 @@ class MainActivity2 : AppCompatActivity() {
         // Locate Continue Button
         val browseContinueBtn = findViewById<Button>(R.id.browseContinueBtn)
 
-        // Locate Check Buttons
-        val BahamasCheckBox = findViewById<CheckBox>(R.id.bahamasCheckBox)
-        val CaribbeanCheckBox = findViewById<CheckBox>(R.id.caribbeanCheckBox)
-        val CubaCheckBox = findViewById<CheckBox>(R.id.cubaCheckBox)
-        val SamplerCheckBox = findViewById<CheckBox>(R.id.samplerCheckBox)
-        val StarCheckBox = findViewById<CheckBox>(R.id.starCheckBox)
-
         // Add clickListener to button
         browseContinueBtn.setOnClickListener {
-
-            // Initialize intent object to pass data
             val cruiseBookingsIntentObject = Intent(this@MainActivity2, TravellersCounter::class.java)
 
-            // Store bookings in the newly created intent object
-//            cruiseBookingsIntentObject.putExtra("isBahamasBooked", BahamasCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isCaribbeanBooked", CaribbeanCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isCubaBooked", CubaCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isSamplerBooked", SamplerCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isStarBooked", StarCheckBox.isChecked)
+            cruiseBookingsIntentObject.putExtra("isBahamasBooked", isBahamasBooked)
+            cruiseBookingsIntentObject.putExtra("isCaribbeanBooked", isCaribbeanBooked)
+            cruiseBookingsIntentObject.putExtra("isCubaBooked", isCubaBooked)
+            cruiseBookingsIntentObject.putExtra("isSamplerBooked", isSamplerBooked)
+            cruiseBookingsIntentObject.putExtra("isStarBooked", isStarBooked)
+
 
             // Send intent object to TravellersCounter Activity
             startActivity(cruiseBookingsIntentObject)

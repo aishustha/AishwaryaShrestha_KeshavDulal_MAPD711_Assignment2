@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.RadioButton
 import android.widget.Spinner
 
 class TravellersCounter : AppCompatActivity() {
@@ -34,22 +36,39 @@ class TravellersCounter : AppCompatActivity() {
             kidCounterSpinner.adapter = adapter
         }
 
-        // Extract info and pass it to Summary Activity
+        // Collect data from intent object
+        val intent = intent
+
+        // Extract values from intent object using relevant keys
+        val isBahamasBooked = intent.getStringExtra("isBahamasBooked")
+        //        isCaribbeanBooked
+        //        isCubaBooked
+        //        isSamplerBooked
+        //        isStarBooked
+
+        val adultSpinner = findViewById<Spinner>(R.id.adultCounterSpinner)
+        val adultCount: String = adultSpinner.getSelectedItem().toString()
+
+        val kidSpinner = findViewById<Spinner>(R.id.kidCounterSpinner)
+        val kidCount: String = kidSpinner.getSelectedItem().toString()
+
+        val seniorRadioYes =findViewById<RadioButton>(R.id.adultYesRadioBtn)
+        val isSeniorPresent:Boolean = seniorRadioYes.isChecked
+
+        // Locate Continue Button
+        val continueBtn = findViewById<Button>(R.id.travellersCountContinueBtn)
+
         // Add clickListener to button
-        browseContinueBtn.setOnClickListener {
+        continueBtn.setOnClickListener {
 
             // Initialize intent object to pass data
-            val cruiseBookingsIntentObject = Intent(this@MainActivity2, TravellersCounter::class.java)
-
-            // Store bookings in the newly created intent object
-//            cruiseBookingsIntentObject.putExtra("isBahamasBooked", BahamasCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isCaribbeanBooked", CaribbeanCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isCubaBooked", CubaCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isSamplerBooked", SamplerCheckBox.isChecked)
-//            cruiseBookingsIntentObject.putExtra("isStarBooked", StarCheckBox.isChecked)
+            val myIntentObject = Intent(this@TravellersCounter, Summary::class.java)
+            myIntentObject.putExtra("adultCount", adultCount)
+            myIntentObject.putExtra("kidCount", kidCount)
+            myIntentObject.putExtra("isSeniorPresent", isSeniorPresent)
 
             // Send intent object to TravellersCounter Activity
-            startActivity(cruiseBookingsIntentObject)
+            startActivity(myIntentObject)
         }
     }
 }

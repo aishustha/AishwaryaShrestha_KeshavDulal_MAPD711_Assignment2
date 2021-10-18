@@ -6,22 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Summary"
     android:orientation="vertical"
+
     >
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.AishwaryaShrestha_KeshavDulal_MAPD711_Assignment2.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.AishwaryaShrestha_KeshavDulal_MAPD711_Assignment2.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -29,24 +15,30 @@
         android:layout_height="wrap_content"
         android:text="@string/summary" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/summaryDetailsTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical" >-->
 
-        </androidx.recyclerview.widget.RecyclerView>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/total" />
+<!--        </androidx.recyclerview.widget.RecyclerView>-->
 
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/textView3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/total" />-->
+
+<!--    </LinearLayout>-->
 
     <Button
         android:id="@+id/paymentSummaryContinueBtn"

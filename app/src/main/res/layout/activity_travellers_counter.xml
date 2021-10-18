@@ -43,12 +43,12 @@
         android:text="@string/peopleOver60" />
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/adultYesRadioBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/yes" />
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/adultNoRadioBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/no" />
