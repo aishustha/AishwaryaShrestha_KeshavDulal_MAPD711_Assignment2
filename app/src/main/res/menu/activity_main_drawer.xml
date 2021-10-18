@@ -11,7 +11,7 @@
             android:id="@+id/caribbean"
             android:title="Caribbean Cruise" />
         <item
-            android:id="@+id/Cuba"
+            android:id="@+id/cuba"
             android:title="Cuba Cruise" />
         <item
             android:id="@+id/sampler"

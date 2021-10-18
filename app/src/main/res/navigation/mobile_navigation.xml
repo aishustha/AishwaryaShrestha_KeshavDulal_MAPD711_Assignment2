@@ -3,23 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/bahamas">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/bahamas"
+        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.bahamas.BahamasFragment"
+        android:label="Bahamas Cruise"
+        tools:layout="@layout/fragment_bahamas" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/caribbean"
+        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.caribbean.CaribbeanFragment"
+        android:label="Caribbean Cruise"
+        tools:layout="@layout/fragment_caribbean" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/cuba"
+        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.cuba.CubaFragment"
+        android:label="Cuba Cruise"
+        tools:layout="@layout/fragment_cuba" />
+
+    <fragment
+        android:id="@+id/sampler"
+        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.sampler.SamplerFragment"
+        android:label="Sampler Cruise"
+        tools:layout="@layout/fragment_sampler" />
+
+    <fragment
+        android:id="@+id/star"
+        android:name="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.star.StarFragment"
+        android:label="Star Cruise"
+        tools:layout="@layout/fragment_star" />
+
 </navigation>
