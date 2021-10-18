@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AishwaryaShrestha_KeshavDulal_MAPD711_Assignment2">
         <activity
+            android:name=".CustomerInfo"
+            android:exported="true" />
+        <activity
+            android:name=".payment"
+            android:exported="true" />
+        <activity
+            android:name=".TravellersCounter"
+            android:exported="true" />
+        <activity
+            android:name=".Summary"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity2"
             android:exported="true"
             android:label="@string/title_activity_main2"

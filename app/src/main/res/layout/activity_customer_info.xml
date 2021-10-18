@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerInfo"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_activity_title" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_activity_subtitle"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_option_details"
+        android:layout_marginTop="20dp"
+        />
+
+    <!--  Card Number -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/payment_card_no"
+        android:textSize="16sp"
+        />
+
+    <EditText
+        android:id="@+id/cardNumberET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/payment_card_no_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        />
+
+    <!--  Expiry Date -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/payment_card_expiry"
+        android:textSize="16sp"
+        />
+
+    <EditText
+        android:id="@+id/cardExpiryET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/payment_card_expiry_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        />
+
+    <!--  Card Type -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/payment_card_type"
+        android:textSize="16sp"
+        />
+
+    <EditText
+        android:id="@+id/cardTypeET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/payment_card_type_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/continue_text" />
+
+</LinearLayout>
