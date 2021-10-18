@@ -11,6 +11,87 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_title">Available Cruises</string>
+
+    <!--  Home Screen  -->
+    <string name="home_title">Home</string>
+    <string name="home_subtitle">Sail to the Great Outdoors on a Luxury Cruise Ship</string>
+    <string name="home_button_text">Book a Cruise</string>
+
+    <!--  Browse Screen  -->
+    <string name="add_to_cart">Add to Cart</string>
+
+    <!--    Travellers Counter Screen   -->
+    <string name="travellers_count">Travellers Counter</string>
+    <string name="travellers_counter_adults">Enter no of adults</string>
+    <string name="travellers_counter_kids">Enter no of kids</string>
+    <string name="travellers_counter_senior">Enter no of seniors</string>
+    <string name="peopleOver60">Are any Senior guests (>60 years)?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="continue_text">Continue</string>
+
+    <string-array name="counter">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+
+    <!--    Summary   -->
+    <string name="summary">Cart Summary</string>
+    <string name="total">Total Amount:</string>
+
+    <!--    Payment    -->
+    <string name="payment_activity_title">Payment</string>
+    <string name="payment_activity_subtitle">Please select your payment option</string>
+    <string name="payment_option_1">Credit Card</string>
+    <string name="payment_option_2">Debit Card</string>
+    <string name="payment_option_3">Paypal</string>
+
+    <!--  Payment Form  -->
+    <string name="payment_option_details">Enter Payment Information</string>
+    <string name="payment_card_no">Card Number</string>
+    <string name="payment_card_no_hint">XXXX XXXX XXXX XXXX</string>
+    <string name="payment_card_type">Card Type</string>
+    <string name="payment_card_type_hint">Visa / Amex / American / Mastercard</string>
+    <string name="payment_card_expiry">Expiry Date</string>
+    <string name="payment_card_expiry_hint">MM/YY</string>
+
+    <!--  Customer Information  -->
+    <string name="customer_info_title">Customer Info</string>
+    <string name="customer_info_subtitle">Please enter your information</string>
+
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="country">Hobby</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="Telephone">Telephone No</string>
+    <string name="email">Email</string>
+
+    <!--  Booking Confirmation Screen  -->
+    <string name="customer_name">Customer Name:</string>
+    <string name="customer_address">Customer Address:</string>
+    <string name="city_and_country">City and Country:</string>
+    <string name="cruise_type">Type of Cruise:</string>
+    <string name="visiting_place">Visiting Place:</string>
+    <string name="no_of_guests">Number of Guests:</string>
+    <string name="no_of_nights">Number of Nights:</string>
+    <string name="price">Price:</string>
+
+    <string name="confirmation_message">Thank you for your online reservation. Relax and Enjoy Your Cruise!</string>
+
+
+
+
+
 </resources>

@@ -20,6 +20,22 @@
         <entry key="..\:/centennial/AishwaryaShrestha_KeshavDulal_MAPD711_Assignment2/app/src/main/res/menu/activity_main_drawer.xml" value="0.19591836734693877" />
         <entry key="..\:/centennial/AishwaryaShrestha_KeshavDulal_MAPD711_Assignment2/app/src/main/res/menu/main_activity2.xml" value="0.2212962962962963" />
         <entry key="..\:/centennial/AishwaryaShrestha_KeshavDulal_MAPD711_Assignment2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26256410256410256" />
+        <entry key="app/src/main/res/layout/activity_customer_info.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/activity_payment.xml" value="0.38177083333333334" />
+        <entry key="app/src/main/res/layout/activity_summary.xml" value="0.3637492608229304" />
+        <entry key="app/src/main/res/layout/activity_travellers_counter.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/fragment_bahamas.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/fragment_caribbean.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/fragment_cuba.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/fragment_sampler.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/fragment_star.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/menu/main_activity2.xml" value="0.3958333333333333" />
       </map>
     </option>
   </component>

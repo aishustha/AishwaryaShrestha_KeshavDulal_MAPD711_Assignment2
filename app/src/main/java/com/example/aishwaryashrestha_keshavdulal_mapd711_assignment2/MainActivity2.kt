@@ -1,7 +1,10 @@
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Button
+import android.widget.CheckBox
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -26,13 +29,15 @@ class MainActivity2 : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+//        binding.appBarMain.fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Cruise Added to Cart", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+//        }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -42,6 +47,33 @@ class MainActivity2 : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        // Locate Continue Button
+        val browseContinueBtn = findViewById<Button>(R.id.browseContinueBtn)
+
+        // Locate Check Buttons
+        val BahamasCheckBox = findViewById<CheckBox>(R.id.bahamasCheckBox)
+        val CaribbeanCheckBox = findViewById<CheckBox>(R.id.caribbeanCheckBox)
+        val CubaCheckBox = findViewById<CheckBox>(R.id.cubaCheckBox)
+        val SamplerCheckBox = findViewById<CheckBox>(R.id.samplerCheckBox)
+        val StarCheckBox = findViewById<CheckBox>(R.id.starCheckBox)
+
+        // Add clickListener to button
+        browseContinueBtn.setOnClickListener {
+
+            // Initialize intent object to pass data
+            val cruiseBookingsIntentObject = Intent(this@MainActivity2, TravellersCounter::class.java)
+
+            // Store bookings in the newly created intent object
+//            cruiseBookingsIntentObject.putExtra("isBahamasBooked", BahamasCheckBox.isChecked)
+//            cruiseBookingsIntentObject.putExtra("isCaribbeanBooked", CaribbeanCheckBox.isChecked)
+//            cruiseBookingsIntentObject.putExtra("isCubaBooked", CubaCheckBox.isChecked)
+//            cruiseBookingsIntentObject.putExtra("isSamplerBooked", SamplerCheckBox.isChecked)
+//            cruiseBookingsIntentObject.putExtra("isStarBooked", StarCheckBox.isChecked)
+
+            // Send intent object to TravellersCounter Activity
+            startActivity(cruiseBookingsIntentObject)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
