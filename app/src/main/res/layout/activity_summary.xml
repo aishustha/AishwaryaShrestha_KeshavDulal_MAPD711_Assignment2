@@ -13,13 +13,19 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/summary" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/summary"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/summaryDetailsTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="20sp" />
 
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
@@ -44,5 +50,7 @@
         android:id="@+id/paymentSummaryContinueBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:text="@string/continue_text" />
 </LinearLayout>
