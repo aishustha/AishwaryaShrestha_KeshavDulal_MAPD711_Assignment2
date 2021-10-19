@@ -47,7 +47,9 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="textCapWords"
+            android:maxLength="50"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -72,7 +74,9 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="textCapWords"
+            android:maxLength="20"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -97,7 +101,8 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="textCapWords"
+            android:maxLength="20"/>
     </LinearLayout>
 
     <LinearLayout
@@ -121,7 +126,8 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="textCapWords"
+            android:maxLength="20"/>
     </LinearLayout>
 
 
@@ -146,7 +152,8 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="number"
+            android:maxLength="6"/>
     </LinearLayout>
 
     <LinearLayout
@@ -170,7 +177,8 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="textEmailAddress"
+            android:maxLength="20"/>
     </LinearLayout>
 
 
@@ -195,7 +203,9 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="phone"
+            android:maxLength="10"
+            />
     </LinearLayout>
 
 
