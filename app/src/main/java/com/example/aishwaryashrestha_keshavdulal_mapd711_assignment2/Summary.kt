@@ -24,28 +24,15 @@ class Summary : AppCompatActivity() {
         val intent = intent
 
         // Extract values from intent object using relevant keys
-        val isBahamasBooked = intent.getStringExtra("isBahamasBooked")
-        //        isCaribbeanBooked
-        //        isCubaBooked
-        //        isSamplerBooked
-        //        isStarBooked
-        val kidCount = intent.getStringExtra("kidCount")
-        val adultCount = intent.getStringExtra("adultCount")
-        val totalGuests = (adultCount?.toInt()?.let { kidCount?.toInt()?.plus(it) })
-        val totalPrice = ((kidCount?.toInt()?.times(750) ?: 0 ) + (adultCount?.toInt()?.times(1000)!!)?:0 )
-
-        var destination=""
-//        if(isBahamasBooked == true){
-//            destination += "Bahamas "
-//        }
-//        when (isBahamasBooked) {
-//            true -> destination += "Bahamas "
-//        }
+        val bookedCruise = intent.getStringExtra("bookedCruise")
+        val totalGuests = intent.getStringExtra("totalGuests")
+        val totalPrice = intent.getStringExtra("totalPrice")
+        val duration = intent.getStringExtra("duration")
 
         val summaryDetailsTV = findViewById<TextView>(R.id.summaryDetailsTV)
-        summaryDetailsTV.text = "isBahamasBooked:" + isBahamasBooked.toString() +"\n" +
-                "Kids:"+kidCount+ "\n"+
-                "Adults:"+adultCount+ "\n"+
+        summaryDetailsTV.text = "Booked Cruise:" + bookedCruise +"\n" +
+                "totalGuests:"+totalGuests+ "\n"+
+                "duration:"+duration+ "\n"+
                 "Grand Total: $"+ totalPrice
 
         // Locate Continue Button
@@ -55,12 +42,11 @@ class Summary : AppCompatActivity() {
 
             // Initialize intent object to pass data
             val myIntentObject = Intent(this@Summary, payment::class.java)
-//            myIntentObject.putExtra("adultCount", adultCount)
-//            myIntentObject.putExtra("kidCount", kidCount)
-//            myIntentObject.putExtra("isSeniorPresent", isSeniorPresent)
-            myIntentObject.putExtra("destination", destination)
+
+            myIntentObject.putExtra("bookedCruise", bookedCruise)
             myIntentObject.putExtra("totalGuests", totalGuests)
             myIntentObject.putExtra("totalPrice", totalPrice)
+            myIntentObject.putExtra("duration", duration)
 
             // Send intent object to TravellersCounter Activity
             startActivity(myIntentObject)

@@ -15,63 +15,25 @@ import android.view.View
 import android.widget.*
 
 class TravellersCounter : AppCompatActivity() {
-//    ,AdapterView.OnItemSelectedListener
-
-//    var kidCount=0
-//    var adultCount=0
-//    override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-//        // Retrieve the selected item using
-//        adultCount = parent.getItemAtPosition(pos) as Int
-//    }
-//    override fun onNothingSelected(parent: AdapterView<*>) {
-//        // Another interface callback
-//    }
-//    public fun onKidCountSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-//        kidCount = parent.getItemAtPosition(pos) as Int
-//    }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_travellers_counter)
 
-        // Populate spinners
-        // ref: https://developer.android.com/guide/topics/ui/controls/spinner
-        val adultCounterSpinner: Spinner = findViewById(R.id.adultCounterSpinner)
-
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter.createFromResource(this,R.array.counter,android.R.layout.simple_spinner_item)
-            .also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            adultCounterSpinner.adapter = adapter
-        }
-
-        val kidCounterSpinner: Spinner = findViewById(R.id.kidCounterSpinner)
-        ArrayAdapter.createFromResource(this, R.array.counter, android.R.layout.simple_spinner_item)
-            .also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            kidCounterSpinner.adapter = adapter
-        }
-
-
-//        val spinner: Spinner = findViewById(R.id.spinner)
-//        adultCounterSpinner.onItemSelectedListener = this
-//        kidCounterSpinner.onItemSelectedListener = this
-
         // Collect data from intent object
         val intent = intent
-
         // Extract values from intent object using relevant keys
-        val isBahamasBooked = intent.getStringExtra("isBahamasBooked")
-        //        isCaribbeanBooked
-        //        isCubaBooked
-        //        isSamplerBooked
-        //        isStarBooked
+        val bookedCruise = intent.getStringExtra("bookedCruise")
+        val cruisePrice = intent.getStringExtra("cruisePrice")
+        val duration = intent.getStringExtra("duration")
 
+        // Extract data from spinners
+        val adultCounterSpinner: Spinner = findViewById(R.id.adultCounterSpinner)
+        val adultCount:String = adultCounterSpinner.selectedItem.toString()
+        val kidCount:String = adultCounterSpinner.selectedItem.toString()
+        val totalGuests:Int = (adultCount?.toInt()?.let { kidCount?.toInt()?.plus(it) })
 
-
+        val totalPrice = cruisePrice?.toInt()?.times(totalGuests)
 
         val seniorRadioYes =findViewById<RadioButton>(R.id.adultYesRadioBtn)
         val isSeniorPresent:Boolean = seniorRadioYes.isChecked
@@ -81,15 +43,14 @@ class TravellersCounter : AppCompatActivity() {
 
         // Add clickListener to button
         continueBtn.setOnClickListener {
-            val adultCount: String = adultCounterSpinner.selectedItem.toString()
-            val kidCount: String = adultCounterSpinner.selectedItem.toString()
 
             // Initialize intent object to pass data
             val myIntentObject = Intent(this@TravellersCounter, Summary::class.java)
-            myIntentObject.putExtra("adultCount", adultCount)
-            myIntentObject.putExtra("kidCount", kidCount)
-            myIntentObject.putExtra("isSeniorPresent", isSeniorPresent)
-            myIntentObject.putExtra("isBahamasBooked", isBahamasBooked)
+            myIntentObject.putExtra("totalGuests", totalGuests)
+            myIntentObject.putExtra("bookedCruise", bookedCruise)
+            myIntentObject.putExtra("totalPrice", totalPrice)
+            myIntentObject.putExtra("duration", duration)
+            println("🐞 $totalGuests ${bookedCruise}, ${cruisePrice}, ${duration}")
 
             // Send intent object to TravellersCounter Activity
             startActivity(myIntentObject)

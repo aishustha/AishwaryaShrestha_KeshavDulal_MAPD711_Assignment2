@@ -30,11 +30,9 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMain2Binding
 
-    var isBahamasBooked:Boolean=false
-    var isCaribbeanBooked:Boolean=false
-    var isCubaBooked:Boolean=false
-    var isSamplerBooked:Boolean=false
-    var isStarBooked:Boolean=false
+    var bookedCruise = ""
+    var cruisePrice=0
+    var duration=0
 
     public fun onCheckboxClicked(view: View) {
         if (view is CheckBox) {
@@ -43,26 +41,36 @@ class MainActivity2 : AppCompatActivity() {
                 when (view.id) {
                 R.id.bahamasCheckBox -> {
                     if (checked) {
-                        isBahamasBooked=true
+                        bookedCruise="Bahamas"
+                        cruisePrice = 1900
+                        duration= 3
                     }
                 }
                 R.id.caribbeanCheckBox -> {
                     if (checked) {
-                        isCaribbeanBooked=true
+                        bookedCruise="Caribbean"
+                        cruisePrice = 2100
+                        duration= 4
                     }
                 }
                 R.id.cubaCheckBox -> {
                     if (checked) {
-                        isCubaBooked=true
+                        bookedCruise="Cuba"
+                        cruisePrice = 2200
+                        duration= 5
                     }
                 }
                 R.id.samplerCheckBox -> {
                     if (checked) {
-                        isSamplerBooked=true
+                        bookedCruise="Sampler"
+                        cruisePrice = 2300
+                        duration= 6
                     }
                 } R.id.starCheckBox -> {
                     if (checked) {
-                        isStarBooked=true
+                        bookedCruise="Star"
+                        cruisePrice = 2400
+                        duration= 7
                     }
                 }
             }
@@ -76,11 +84,6 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
-
-//        binding.appBarMain.fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Cruise Added to Cart", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show()
-//        }
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -103,11 +106,10 @@ class MainActivity2 : AppCompatActivity() {
         browseContinueBtn.setOnClickListener {
             val cruiseBookingsIntentObject = Intent(this@MainActivity2, TravellersCounter::class.java)
 
-            cruiseBookingsIntentObject.putExtra("isBahamasBooked", isBahamasBooked)
-            cruiseBookingsIntentObject.putExtra("isCaribbeanBooked", isCaribbeanBooked)
-            cruiseBookingsIntentObject.putExtra("isCubaBooked", isCubaBooked)
-            cruiseBookingsIntentObject.putExtra("isSamplerBooked", isSamplerBooked)
-            cruiseBookingsIntentObject.putExtra("isStarBooked", isStarBooked)
+            cruiseBookingsIntentObject.putExtra("bookedCruise", bookedCruise)
+            cruiseBookingsIntentObject.putExtra("cruisePrice", cruisePrice)
+            cruiseBookingsIntentObject.putExtra("duration", duration)
+        println("🐞 ${bookedCruise}, ${cruisePrice}, ${duration}")
 
 
             // Send intent object to TravellersCounter Activity

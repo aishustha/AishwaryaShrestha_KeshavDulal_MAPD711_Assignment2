@@ -28,33 +28,22 @@ class BookingConfirmation : AppCompatActivity() {
         val telephone = intent.getStringExtra("telephone")
         val email = intent.getStringExtra("email")
 
-        val destination = intent.getStringExtra("destination")
+        val bookedCruise = intent.getStringExtra("bookedCruise")
         val totalGuests = intent.getStringExtra("totalGuests")
         val totalPrice = intent.getStringExtra("totalPrice")
+        val duration = intent.getStringExtra("duration")
 
         // Display the results in a single textview
         val confirmationDetailsTV = findViewById<TextView>(R.id.confirmationDetailsTV)
 
         //print the values in a text view
         confirmationDetailsTV.text =
-            "Customer Name: "+fullName + "\n" +
-            "Customer Address: " +address+ "\n" +
+            "Customer Name: " + fullName + "\n" +
+            "Customer Address: " + address + "\n" +
             "City and Country: "+ city + country  + "\n"
-            "Visiting Places: " + destination+  "\n" +
+            "Visiting Places: " + bookedCruise+  "\n" +
             "Number of Guests: " +totalGuests+  "\n" +
-            "Price: " +totalPrice+  "\n"
-//            "Number of Nights: " +totalNights+  "\n"
-
-//        # Info to display #
-//        Customer Name:
-//        Customer Address:
-//        City and  Country:
-//        Type of Cruise:
-//        Visiting Places:
-//        Cruise Duration:
-//        Number of Guests:
-//        Number of Nights:
-//        Price:
-
+            "Number of Nights: " +duration+  "\n" +
+            "Price: " +totalPrice
     }
 }

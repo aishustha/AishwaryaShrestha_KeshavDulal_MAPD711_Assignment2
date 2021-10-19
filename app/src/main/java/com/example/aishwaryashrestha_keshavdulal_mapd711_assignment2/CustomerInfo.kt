@@ -20,9 +20,10 @@ class CustomerInfo : AppCompatActivity() {
 
         // Collect data from intent object
         val intent = intent
-        val destination = intent.getStringExtra("destination")
+        val bookedCruise = intent.getStringExtra("bookedCruise")
         val totalGuests = intent.getStringExtra("totalGuests")
         val totalPrice = intent.getStringExtra("totalPrice")
+        val duration = intent.getStringExtra("duration")
 
         // Store EditText field's references
         val fullNameET = findViewById<EditText>(R.id.fullNameET)
@@ -61,9 +62,10 @@ class CustomerInfo : AppCompatActivity() {
             myIntentObject.putExtra("email",email)
 
             // from previous activity screen
-            myIntentObject.putExtra("destination", destination)
+            myIntentObject.putExtra("bookedCruise", bookedCruise)
             myIntentObject.putExtra("totalGuests", totalGuests)
             myIntentObject.putExtra("totalPrice", totalPrice)
+            myIntentObject.putExtra("duration", duration)
 
             // Send intent object to  SecondActivity
             startActivity(myIntentObject)

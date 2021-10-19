@@ -22,36 +22,23 @@ class payment : AppCompatActivity() {
         // Locate Continue Button
         val continueBtn = findViewById<Button>(R.id.paymentDetailsContinueBtn)
 
-        // Reference Form fields
-        val cardNumberET = findViewById<EditText>(R.id.cardNumberET)
-        val cardExpiryET = findViewById<EditText>(R.id.cardExpiryET)
-        val cardTypeET = findViewById<EditText>(R.id.cardTypeET)
-
         // Collect data from intent object
         val intent = intent
-        val destination = intent.getStringExtra("destination")
+        val bookedCruise = intent.getStringExtra("bookedCruise")
         val totalGuests = intent.getStringExtra("totalGuests")
         val totalPrice = intent.getStringExtra("totalPrice")
-
+        val duration = intent.getStringExtra("duration")
 
         // Add clickListener to button
         continueBtn.setOnClickListener {
 
-            // collect data forms
-            val cardNumber = cardNumberET.text?.toString()
-            val cardExpiry = cardExpiryET.text?.toString()
-            val cardType = cardTypeET.text?.toString()
-
             // Initialize intent object to pass data
             val myIntentObject = Intent(this@payment, CustomerInfo::class.java)
-            // todo: remove these 3
-            myIntentObject.putExtra("cardNumber", cardNumber)
-            myIntentObject.putExtra("cardExpiry", cardExpiry)
-            myIntentObject.putExtra("cardType", cardType)
 
-            myIntentObject.putExtra("destination", destination)
+            myIntentObject.putExtra("bookedCruise", bookedCruise)
             myIntentObject.putExtra("totalGuests", totalGuests)
             myIntentObject.putExtra("totalPrice", totalPrice)
+            myIntentObject.putExtra("duration", duration)
 
             // Send intent object to TravellersCounter Activity
             startActivity(myIntentObject)
