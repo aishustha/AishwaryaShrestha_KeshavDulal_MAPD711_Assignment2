@@ -27,13 +27,9 @@ class TravellersCounter : AppCompatActivity() {
         val cruisePrice = intent.getStringExtra("cruisePrice")
         val duration = intent.getStringExtra("duration")
 
-        // Extract data from spinners
+        // Reference Spinner UI
         val adultCounterSpinner: Spinner = findViewById(R.id.adultCounterSpinner)
-        val adultCount:String = adultCounterSpinner.selectedItem.toString()
-        val kidCount:String = adultCounterSpinner.selectedItem.toString()
-        val totalGuests:Int = (adultCount?.toInt()?.let { kidCount?.toInt()?.plus(it) })
-
-        val totalPrice = cruisePrice?.toInt()?.times(totalGuests)
+        val kidCounterSpinner: Spinner = findViewById(R.id.kidCounterSpinner)
 
         val seniorRadioYes =findViewById<RadioButton>(R.id.adultYesRadioBtn)
         val isSeniorPresent:Boolean = seniorRadioYes.isChecked
@@ -43,12 +39,18 @@ class TravellersCounter : AppCompatActivity() {
 
         // Add clickListener to button
         continueBtn.setOnClickListener {
+        // Extract data from spinners
+            val adultCount:String = adultCounterSpinner.selectedItem.toString()
+            val kidCount:String = kidCounterSpinner.selectedItem.toString()
+            val totalGuests:Int = (adultCount?.toInt()?.let { kidCount?.toInt()?.plus(it) })
+
+            val totalPrice = cruisePrice?.toInt()?.times(totalGuests)
 
             // Initialize intent object to pass data
             val myIntentObject = Intent(this@TravellersCounter, Summary::class.java)
-            myIntentObject.putExtra("totalGuests", totalGuests)
+            myIntentObject.putExtra("totalGuests", totalGuests.toString())
             myIntentObject.putExtra("bookedCruise", bookedCruise)
-            myIntentObject.putExtra("totalPrice", totalPrice)
+            myIntentObject.putExtra("totalPrice", totalPrice.toString())
             myIntentObject.putExtra("duration", duration)
             println("🐞 $totalGuests ${bookedCruise}, ${cruisePrice}, ${duration}")
 

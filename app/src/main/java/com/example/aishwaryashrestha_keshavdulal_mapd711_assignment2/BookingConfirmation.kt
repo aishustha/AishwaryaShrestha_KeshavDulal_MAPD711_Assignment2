@@ -24,9 +24,9 @@ class BookingConfirmation : AppCompatActivity() {
         val address = intent.getStringExtra("address")
         val city = intent.getStringExtra("city")
         val country = intent.getStringExtra("country")
-        val postalCode = intent.getStringExtra("postalCode")
-        val telephone = intent.getStringExtra("telephone")
-        val email = intent.getStringExtra("email")
+//        val postalCode = intent.getStringExtra("postalCode")
+//        val telephone = intent.getStringExtra("telephone")
+//        val email = intent.getStringExtra("email")
 
         val bookedCruise = intent.getStringExtra("bookedCruise")
         val totalGuests = intent.getStringExtra("totalGuests")
@@ -40,7 +40,7 @@ class BookingConfirmation : AppCompatActivity() {
         confirmationDetailsTV.text =
             "Customer Name: " + fullName + "\n" +
             "Customer Address: " + address + "\n" +
-            "City and Country: "+ city + country  + "\n"
+            "City and Country: " + city + country  + "\n" +
             "Visiting Places: " + bookedCruise+  "\n" +
             "Number of Guests: " +totalGuests+  "\n" +
             "Number of Nights: " +duration+  "\n" +

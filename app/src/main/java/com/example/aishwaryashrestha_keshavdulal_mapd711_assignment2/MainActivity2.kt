@@ -107,8 +107,8 @@ class MainActivity2 : AppCompatActivity() {
             val cruiseBookingsIntentObject = Intent(this@MainActivity2, TravellersCounter::class.java)
 
             cruiseBookingsIntentObject.putExtra("bookedCruise", bookedCruise)
-            cruiseBookingsIntentObject.putExtra("cruisePrice", cruisePrice)
-            cruiseBookingsIntentObject.putExtra("duration", duration)
+            cruiseBookingsIntentObject.putExtra("cruisePrice", cruisePrice.toString())
+            cruiseBookingsIntentObject.putExtra("duration", duration.toString())
         println("🐞 ${bookedCruise}, ${cruisePrice}, ${duration}")
 
 

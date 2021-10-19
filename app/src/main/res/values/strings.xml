@@ -23,8 +23,8 @@
 
     <!--    Travellers Counter Screen   -->
     <string name="travellers_count">Travellers Counter</string>
-    <string name="travellers_counter_adults">Enter no of adults ($1000/head)</string>
-    <string name="travellers_counter_kids">Enter no of kids($750/head)</string>
+    <string name="travellers_counter_adults">Enter no of adults</string>
+    <string name="travellers_counter_kids">Enter no of kids</string>
     <string name="travellers_counter_senior">Enter no of seniors</string>
     <string name="peopleOver60">Are any Senior guests (>60 years)?</string>
     <string name="yes">Yes</string>
