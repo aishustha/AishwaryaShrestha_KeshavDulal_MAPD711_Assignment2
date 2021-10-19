@@ -80,14 +80,14 @@
     <string name="email">Email</string>
 
     <!--  Booking Confirmation Screen  -->
-<!--    <string name="customer_name">Customer Name:</string>-->
-<!--    <string name="customer_address">Customer Address:</string>-->
-<!--    <string name="city_and_country">City and Country:</string>-->
-<!--    <string name="cruise_type">Type of Cruise:</string>-->
-<!--    <string name="visiting_place">Visiting Place:</string>-->
-<!--    <string name="no_of_guests">Number of Guests:</string>-->
-<!--    <string name="no_of_nights">Number of Nights:</string>-->
-<!--    <string name="price">Price:</string>-->
+    <!--    <string name="customer_name">Customer Name:</string>-->
+    <!--    <string name="customer_address">Customer Address:</string>-->
+    <!--    <string name="city_and_country">City and Country:</string>-->
+    <!--    <string name="cruise_type">Type of Cruise:</string>-->
+    <!--    <string name="visiting_place">Visiting Place:</string>-->
+    <!--    <string name="no_of_guests">Number of Guests:</string>-->
+    <!--    <string name="no_of_nights">Number of Nights:</string>-->
+    <!--    <string name="price">Price:</string>-->
 
     <string name="confirmation_message">Thank you for your online reservation. Relax and Enjoy Your Cruise!</string>
 

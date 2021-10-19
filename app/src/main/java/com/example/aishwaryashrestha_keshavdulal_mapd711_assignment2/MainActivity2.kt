@@ -14,16 +14,15 @@ import android.view.Menu
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
 import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.databinding.ActivityMain2Binding
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -31,46 +30,47 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivityMain2Binding
 
     var bookedCruise = ""
-    var cruisePrice=0
-    var duration=0
+    var cruisePrice = 0
+    var duration = 0
 
-    public fun onCheckboxClicked(view: View) {
-        if (view is CheckBox) {
+    fun onCheckboxClicked(view: View) {
+        /**/if (view is CheckBox) {
             val checked: Boolean = view.isChecked
 
-                when (view.id) {
+            when (view.id) {
                 R.id.bahamasCheckBox -> {
                     if (checked) {
-                        bookedCruise="Bahamas"
+                        bookedCruise = "Bahamas"
                         cruisePrice = 1900
-                        duration= 3
+                        duration = 3
                     }
                 }
                 R.id.caribbeanCheckBox -> {
                     if (checked) {
-                        bookedCruise="Caribbean"
+                        bookedCruise = "Caribbean"
                         cruisePrice = 2100
-                        duration= 4
+                        duration = 4
                     }
                 }
                 R.id.cubaCheckBox -> {
                     if (checked) {
-                        bookedCruise="Cuba"
+                        bookedCruise = "Cuba"
                         cruisePrice = 2200
-                        duration= 5
+                        duration = 5
                     }
                 }
                 R.id.samplerCheckBox -> {
                     if (checked) {
-                        bookedCruise="Sampler"
+                        bookedCruise = "Sampler"
                         cruisePrice = 2300
-                        duration= 6
+                        duration = 6
                     }
-                } R.id.starCheckBox -> {
+                }
+                R.id.starCheckBox -> {
                     if (checked) {
-                        bookedCruise="Star"
+                        bookedCruise = "Star"
                         cruisePrice = 2400
-                        duration= 7
+                        duration = 7
                     }
                 }
             }
@@ -104,12 +104,13 @@ class MainActivity2 : AppCompatActivity() {
 
         // Add clickListener to button
         browseContinueBtn.setOnClickListener {
-            val cruiseBookingsIntentObject = Intent(this@MainActivity2, TravellersCounter::class.java)
+            val cruiseBookingsIntentObject =
+                Intent(this@MainActivity2, TravellersCounter::class.java)
 
             cruiseBookingsIntentObject.putExtra("bookedCruise", bookedCruise)
             cruiseBookingsIntentObject.putExtra("cruisePrice", cruisePrice.toString())
             cruiseBookingsIntentObject.putExtra("duration", duration.toString())
-        println("🐞 ${bookedCruise}, ${cruisePrice}, ${duration}")
+//        println("🐞 ${bookedCruise}, ${cruisePrice}, ${duration}")
 
 
             // Send intent object to TravellersCounter Activity

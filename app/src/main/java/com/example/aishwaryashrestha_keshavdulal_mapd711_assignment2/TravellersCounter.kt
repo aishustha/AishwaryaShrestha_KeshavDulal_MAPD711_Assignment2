@@ -52,7 +52,7 @@ class TravellersCounter : AppCompatActivity() {
             myIntentObject.putExtra("bookedCruise", bookedCruise)
             myIntentObject.putExtra("totalPrice", totalPrice.toString())
             myIntentObject.putExtra("duration", duration)
-            println("🐞 $totalGuests ${bookedCruise}, ${cruisePrice}, ${duration}")
+//            println("🐞 $totalGuests ${bookedCruise}, ${cruisePrice}, ${duration}")
 
             // Send intent object to TravellersCounter Activity
             startActivity(myIntentObject)

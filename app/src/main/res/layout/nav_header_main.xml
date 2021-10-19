@@ -14,8 +14,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     app:flow_horizontalAlign="center"
     app:flow_verticalAlign="center"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
 
     <LinearLayout

@@ -7,9 +7,9 @@
  */
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class BookingConfirmation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,11 +39,11 @@ class BookingConfirmation : AppCompatActivity() {
         //print the values in a text view
         confirmationDetailsTV.text =
             "Customer Name: " + fullName + "\n" +
-            "Customer Address: " + address + "\n" +
-            "City and Country: " + city + country  + "\n" +
-            "Visiting Places: " + bookedCruise+  "\n" +
-            "Number of Guests: " +totalGuests+  "\n" +
-            "Number of Nights: " +duration+  "\n" +
-            "Price: " +totalPrice
+                    "Customer Address: " + address + "\n" +
+                    "City and Country: " + city + country + "\n" +
+                    "Visiting Places: " + bookedCruise + "\n" +
+                    "Number of Guests: " + totalGuests + "\n" +
+                    "Number of Nights: " + duration + "\n" +
+                    "Price: " + totalPrice
     }
 }
