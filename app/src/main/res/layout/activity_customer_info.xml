@@ -152,7 +152,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="16dp"
             android:importantForAutofill="no"
-            android:inputType="number"
+            android:inputType="textPostalAddress"
             android:maxLength="6"/>
     </LinearLayout>
 
