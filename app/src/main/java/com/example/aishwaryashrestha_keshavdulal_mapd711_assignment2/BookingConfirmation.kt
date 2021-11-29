@@ -7,9 +7,15 @@
  */
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.io.FileOutputStream
+import java.io.OutputStreamWriter
 
 class BookingConfirmation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,4 +52,24 @@ class BookingConfirmation : AppCompatActivity() {
                     "Number of Nights: " + duration + "\n" +
                     "Price: " + totalPrice
     }
+    // Function for button send
+    fun print_text(view: android.view.View) {
+
+        if (view.id == R.id.printbtn) {
+
+            var textview = findViewById<TextView>(R.id.confirmationDetailsTV)
+
+            try {
+                val fileOutputStream: FileOutputStream = openFileOutput("booking_details.txt", Context.MODE_PRIVATE)
+                val outputWriter = OutputStreamWriter(fileOutputStream)
+                outputWriter.write(textview.text.toString())
+                outputWriter.close()
+                //display file saved message
+                Toast.makeText(baseContext, "File saved successfully!", Toast.LENGTH_SHORT).show()
+            }
+            catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        }
 }
