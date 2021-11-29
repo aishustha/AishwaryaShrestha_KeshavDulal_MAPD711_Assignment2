@@ -13,7 +13,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textSize="20sp" />
 
     <TextView
@@ -24,4 +24,13 @@
         android:layout_marginRight="15dp"
         android:text="@string/confirmation_message"
         android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/printbtn"
+        android:onClick="print_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/save_data_to_text_file" />
 </LinearLayout>
