@@ -8,16 +8,12 @@
 
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
-import android.content.ContentValues.TAG
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -28,8 +24,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.databinding.ActivityMain2Binding
 import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.*
-import java.net.HttpURLConnection
-import java.net.URL
 
 
 class BookingActivity : AppCompatActivity() {
@@ -125,27 +119,29 @@ class BookingActivity : AppCompatActivity() {
             startActivity(cruiseBookingsIntentObject)
         }
 
+        // BUGGY CODE BLOCK - BEGIN
         // fetch cruise images from url using coroutines and store it on imageView
-        val imageView4 = findViewById<ImageView>(R.id.iv)
-
-        GlobalScope.launch(Dispatchers.IO) {
-            // Background Thread Work
+//        GlobalScope.launch(Dispatchers.IO) {
+//            // N/w activity is ran on Background Thread
+//            // Error seems to be happening on this thread
+//
 //            val imageUrl =
 //                "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80"
-            val imageUrl ="https://via.placeholder.com/300.png"
-            val url = URL(imageUrl)
-            val connection = url.openConnection() as HttpURLConnection
-            connection.doInput = true
-            connection.connect()
-
-            val inputStream = connection.inputStream
-            val bitmap = BitmapFactory.decodeStream(inputStream)
-
-            // Main Thread Work
-            launch(Dispatchers.Main) {
-                imageView4.setImageBitmap(bitmap)
-            }
-        }
+//            val url = URL(imageUrl)
+//            val connection = url.openConnection() as HttpURLConnection
+//            connection.doInput = true
+//            connection.connect()
+//
+//            val inputStream = connection.inputStream
+//            val bitmap = BitmapFactory.decodeStream(inputStream)
+//
+//            // Switching scope to Main Thread to access the View
+//            launch(Dispatchers.Main) {
+//        val imageView4 = findViewById<ImageView>(R.id.imageView4)
+//                imageView4.setImageBitmap(bitmap)
+//            }
+//        }
+        // END of buggy code block
 
     }
 

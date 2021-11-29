@@ -89,6 +89,8 @@
     <!--    <string name="no_of_nights">Number of Nights:</string>-->
     <!--    <string name="price">Price:</string>-->
 
+    <string name="textviewConfirmation">Lorem Ipsum</string>
+    <string name="save_data_to_text_file">Save Data to File</string>
     <string name="confirmation_message">Thank you for your online reservation. Relax and Enjoy Your Cruise!</string>
 
 
