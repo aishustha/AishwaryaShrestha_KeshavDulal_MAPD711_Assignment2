@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -25,7 +26,7 @@
             android:name=".Summary"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".BookingActivity"
             android:exported="true"
             android:label="@string/title_activity_main2"
             android:theme="@style/Theme.AishwaryaShrestha_KeshavDulal_MAPD711_Assignment2.NoActionBar" />
