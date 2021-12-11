@@ -38,6 +38,7 @@
         android:text="Password" />
 
     <Button
+        android:id="@+id/signinBtn"
         android:layout_width="355dp"
         android:layout_height="60dp"
         android:clickable="true"
@@ -54,7 +55,7 @@
         app:rippleColor="#ACE4B2" />
 
     <Button
-        android:id="@+id/sendBtn"
+        android:id="@+id/registerBtn"
         android:layout_width="355dp"
         android:layout_height="60dp"
         android:clickable="true"
