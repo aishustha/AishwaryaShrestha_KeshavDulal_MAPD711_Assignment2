@@ -10,6 +10,7 @@ package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -51,19 +52,18 @@ class BookingConfirmation : AppCompatActivity() {
                     "Number of Guests: " + totalGuests + "\n" +
                     "Number of Nights: " + duration + "\n" +
                     "Price: " + totalPrice
-    }
-    // Function for button send
-    fun print_text(view: android.view.View) {
 
-        if (view.id == R.id.printbtn) {
-
-            var textview = findViewById<TextView>(R.id.confirmationDetailsTV)
-
+        val printbtn = findViewById<Button>(R.id.printbtn)
+        printbtn.setOnClickListener{
             try {
                 val fileOutputStream: FileOutputStream = openFileOutput("booking_details.txt", Context.MODE_PRIVATE)
                 val outputWriter = OutputStreamWriter(fileOutputStream)
-                outputWriter.write(textview.text.toString())
+                outputWriter.write("\t\tCenten Cruise Inc Booking details\n\n")
+                outputWriter.write(confirmationDetailsTV.text.toString())
+                outputWriter.write("\n\n")
+                outputWriter.write("\t\tThank you for booking your tour with us")
                 outputWriter.close()
+
                 //display file saved message
                 Toast.makeText(baseContext, "File saved successfully!", Toast.LENGTH_SHORT).show()
             }
@@ -71,5 +71,7 @@ class BookingConfirmation : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
-        }
-}
+
+    }
+    }
+
