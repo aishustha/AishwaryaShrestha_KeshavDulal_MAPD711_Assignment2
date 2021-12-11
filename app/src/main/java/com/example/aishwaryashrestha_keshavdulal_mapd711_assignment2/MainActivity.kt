@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         //handle button click
         sendBtn.setOnClickListener {
-            val intent = Intent(this@MainActivity, BookingActivity::class.java)
+            val intent = Intent(this@MainActivity, Register::class.java)
 
             //sending data to second activity
             startActivity(intent)
