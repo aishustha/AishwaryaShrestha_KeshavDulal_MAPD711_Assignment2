@@ -5,71 +5,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
     android:gravity="center"
-
     tools:context=".MainActivity">
-
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@mipmap/cruise"
-        android:contentDescription="TODO" />
+        android:layout_width="wrap_content"
+        android:layout_height="238dp"
+        android:layout_marginTop="-70dp"
+        app:srcCompat="@mipmap/banner" />
 
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:text="Username" />
+        android:layout_height="428dp"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:text="Password" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:text="Sign In"
+            android:textColor="#000"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/signinBtn"
-        android:layout_width="355dp"
-        android:layout_height="60dp"
-        android:clickable="true"
-        android:defaultFocusHighlightEnabled="false"
-        android:focusable="auto"
-        android:focusedByDefault="false"
-        android:text="Sign In"
-        android:textColor="#fff"
-        android:textColorHighlight="#fff"
-        android:textColorHint="#fff"
-        android:textColorLink="#fff"
-        android:textSize="20sp"
-        app:iconTint="#ffffff"
-        app:rippleColor="#ACE4B2" />
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="Username" />
 
-    <Button
-        android:id="@+id/registerBtn"
-        android:layout_width="355dp"
-        android:layout_height="60dp"
-        android:clickable="true"
-        android:defaultFocusHighlightEnabled="false"
-        android:focusable="auto"
-        android:focusedByDefault="false"
-        android:text="Sign up"
-        android:textColor="#fff"
-        android:textColorHighlight="#fff"
-        android:textColorHint="#fff"
-        android:textColorLink="#fff"
-        android:textSize="20sp"
-        app:iconTint="#ffffff"
-        app:rippleColor="#ACE4B2" />
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="Password" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/signinBtn"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:defaultFocusHighlightEnabled="false"
+                android:focusable="auto"
+                android:focusedByDefault="false"
+                android:text="Sign In"
+                android:textColor="#fff"
+                android:textColorHighlight="#fff"
+                android:textColorHint="#fff"
+                android:textColorLink="#fff"
+                android:textSize="16sp"
+                app:iconTint="#ffffff"
+                app:rippleColor="#ACE4B2" />
+
+            <Button
+                android:id="@+id/registerBtn"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:defaultFocusHighlightEnabled="false"
+                android:focusable="auto"
+                android:focusedByDefault="false"
+                android:text="Sign up"
+                android:textColor="#fff"
+                android:textColorHighlight="#fff"
+                android:textColorHint="#fff"
+                android:textColorLink="#fff"
+                android:textSize="16sp"
+                app:iconTint="#ffffff"
+                app:rippleColor="#ACE4B2" />
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
