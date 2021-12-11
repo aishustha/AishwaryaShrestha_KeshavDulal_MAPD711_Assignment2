@@ -76,7 +76,7 @@
                 android:textColorLink="#fff"
                 android:textSize="16sp"
                 app:iconTint="#ffffff"
-                app:rippleColor="#ACE4B2" />
+                app:rippleColor="#000" />
 
             <Button
                 android:id="@+id/registerBtn"
@@ -93,7 +93,7 @@
                 android:textColorLink="#fff"
                 android:textSize="16sp"
                 app:iconTint="#ffffff"
-                app:rippleColor="#ACE4B2" />
+                app:rippleColor="#000" />
         </LinearLayout>
 
 
