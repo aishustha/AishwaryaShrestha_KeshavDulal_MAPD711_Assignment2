@@ -1,208 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".Register">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:text="Sign Up"
+                android:textColor="#000"
+                android:textSize="32dp"
+
+                android:textStyle="bold"  />
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+
+
         <TextView
             android:id="@+id/username_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="12dp"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Username"/>
 
         <EditText
             android:id="@+id/inputUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
+            android:hint="Username"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintStart_toEndOf="@+id/username_lbl"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingStart="10dp"
+            android:text="Username" />
     </LinearLayout>
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/password_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username_lbl" />
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
         <EditText
             android:id="@+id/inputPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
+            android:hint="Password"
             android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/password_lbl"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            android:paddingStart="10dp"
+            android:text="Password" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/firstname_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FirstName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_lbl" />
+            android:text="First Name"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
         <EditText
             android:id="@+id/inputFirstName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
+            android:hint="First Name"
             android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/firstname_lbl"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            android:paddingStart="10dp"
+            android:text="First Name" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/lastname_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LastName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/firstname_lbl" />
+            android:text="Last Name"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/inputLastName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="Last Name" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/address_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Address"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lastname_lbl" />
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
 
         <EditText
             android:id="@+id/inputAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="Address"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="Address" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/city_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="City"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/address_lbl" />
-
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
         <EditText
             android:id="@+id/inputCity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="City"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="City" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/postalCode_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="postalCode"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/city_lbl" />
+            android:text="Postal Code"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
 
         <EditText
             android:id="@+id/inputPostalCode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="Postal Code"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="Postal Code" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/telephone_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telephone"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/postalCode_lbl" />
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/inputTelephone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="Telephone"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="Telephone" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/email_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/telephone_lbl" />
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
 
         <EditText
             android:id="@+id/inputEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:text="Email" />
     </LinearLayout>
 
     <Button
         android:id="@+id/buttonRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="614dp" />
-</LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Sign Up"
+        app:cornerRadius="50dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
