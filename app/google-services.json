@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "334231792124",
+    "firebase_url": "https://centencruiseinc-default-rtdb.firebaseio.com",
+    "project_id": "centencruiseinc",
+    "storage_bucket": "centencruiseinc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334231792124:android:ed3e67ea1535b0538dea79",
+        "android_client_info": {
+          "package_name": "com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334231792124-09du3t2t5asr0epb5097lhnqij4c4lrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh2CItAz6DinLvftmadto6YFAwCcHiABI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334231792124-09du3t2t5asr0epb5097lhnqij4c4lrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
