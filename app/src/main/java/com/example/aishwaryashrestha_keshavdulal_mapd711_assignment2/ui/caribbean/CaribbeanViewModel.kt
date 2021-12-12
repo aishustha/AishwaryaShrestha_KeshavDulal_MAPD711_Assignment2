@@ -1,8 +1,16 @@
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.ui.caribbean
 
+import android.graphics.BitmapFactory
+import android.widget.ImageView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.R
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.net.HttpURLConnection
+import java.net.URL
 
 class CaribbeanViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
@@ -17,4 +25,8 @@ class CaribbeanViewModel : ViewModel() {
                 "vivid coral reefs of Bonaire, home to manta rays and parrot fish."
     }
     val text: LiveData<String> = _text
+
+//    init{
+//
+//    }
 }

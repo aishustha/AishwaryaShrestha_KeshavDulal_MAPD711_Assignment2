@@ -11,9 +11,9 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="239dp"
-        android:src="@mipmap/caribbean"
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="5dp" />
+<!--        android:src="@mipmap/caribbean"-->
 
     <TextView
         android:id="@+id/text_caribbean"
