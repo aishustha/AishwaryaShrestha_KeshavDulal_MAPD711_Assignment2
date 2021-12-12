@@ -20,6 +20,11 @@ class MainActivity : AppCompatActivity() {
         val signinBtn= findViewById<Button>(R.id.signinBtn)
         val registerBtn = findViewById<Button>(R.id.registerBtn)
 
+        //starts service to play background music
+        Intent(this,BackgroundMusicService::class.java).also {
+            startService(it)
+        }
+
         //handle button click
         signinBtn.setOnClickListener {
             val intent = Intent(this@MainActivity, BookingActivity::class.java)
