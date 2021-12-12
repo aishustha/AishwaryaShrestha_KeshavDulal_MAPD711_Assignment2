@@ -111,10 +111,11 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="37dp"
+            android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:onClick="toggleMusic"
             android:background="@color/black"
+            android:minHeight="48dp"
+            android:onClick="toggleMusic"
             app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
     </LinearLayout>
