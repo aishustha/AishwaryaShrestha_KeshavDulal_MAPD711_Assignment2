@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="12dp"
             android:text="Sign In"
             android:textColor="#000"
             android:textSize="32dp"
@@ -37,13 +37,13 @@
             android:id="@+id/editTextTextPersonName3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="25dp"
             android:background="@drawable/textfieldgrey"
             android:ems="10"
             android:hint="Username"
             android:inputType="textPersonName"
             android:paddingStart="10dp"
-            android:layout_marginTop="20dp"
             android:text="Username" />
 
         <EditText
@@ -109,10 +109,16 @@
                 />
         </LinearLayout>
 
-
-
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:onClick="toggleMusic"
+            android:background="@color/black"
+            app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
     </LinearLayout>
+
 
 
 </LinearLayout>

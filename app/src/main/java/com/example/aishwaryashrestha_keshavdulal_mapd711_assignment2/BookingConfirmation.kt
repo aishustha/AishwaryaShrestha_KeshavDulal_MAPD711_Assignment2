@@ -22,12 +22,16 @@ import java.io.FileOutputStream
 import java.io.OutputStreamWriter
 @Suppress("DEPRECATION")
 class BookingConfirmation : AppCompatActivity() {
+    //state of music variable
+    var isOn = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking_confirmation)
 
         // Collect data from intent object
         val intent = intent
+
 
         // Extract values from intent object using relevant keys
         val fullName = intent.getStringExtra("fullName")
@@ -74,7 +78,7 @@ class BookingConfirmation : AppCompatActivity() {
             catch (e: Exception) {
                 e.printStackTrace()
             }
-            
+
             //***************************ThankYou service called************************
             //plays background thank you message service
             Intent(this,ThankYouSoundService::class.java).also {
@@ -83,5 +87,24 @@ class BookingConfirmation : AppCompatActivity() {
         }//close btnPressed
 
     }//close onCreate
+    // function for toggleing sound on/off
+    fun toggleMusic(view: View)
+    {
+        if(isOn === true){
+            //if isOn is true then turn off else turn music on
+            Intent(this, BackgroundMusicService::class.java).also {
+                stopService(it)
+            }
+            isOn = false
+        } else
+        {
+            //if isOn is false then turn on e
+            Intent(this, BackgroundMusicService::class.java).also {
+                startService(it)
+            }
+            isOn = true
+        }
+
+    }
 }
 

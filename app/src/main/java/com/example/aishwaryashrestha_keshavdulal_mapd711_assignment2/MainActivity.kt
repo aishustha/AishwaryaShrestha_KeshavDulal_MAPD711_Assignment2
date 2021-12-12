@@ -10,15 +10,21 @@ package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    //state of music player variable
+    var isOn = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val signinBtn= findViewById<Button>(R.id.signinBtn)
         val registerBtn = findViewById<Button>(R.id.registerBtn)
+
+
 
         //starts service to play background music
         Intent(this,BackgroundMusicService::class.java).also {
@@ -40,5 +46,27 @@ class MainActivity : AppCompatActivity() {
             //sending data to second activity
             startActivity(intent)
         }
+
+
+
+    }
+    // function for toggleing sound on/off
+    fun toggleMusic(view: View)
+    {
+        if (isOn == true){
+            //if isOn is true then turn off else turn music on
+            Intent(this, BackgroundMusicService::class.java).also {
+                stopService(it)
+            }
+            isOn = false
+        } else
+        {
+            //if isOn is false then turn on e
+            Intent(this, BackgroundMusicService::class.java).also {
+                startService(it)
+            }
+            isOn = true
+        }
+
     }
 }
