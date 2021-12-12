@@ -112,37 +112,10 @@ class BookingActivity : AppCompatActivity() {
             cruiseBookingsIntentObject.putExtra("bookedCruise", bookedCruise)
             cruiseBookingsIntentObject.putExtra("cruisePrice", cruisePrice.toString())
             cruiseBookingsIntentObject.putExtra("duration", duration.toString())
-//        println("🐞 ${bookedCruise}, ${cruisePrice}, ${duration}")
-
 
             // Send intent object to TravellersCounter Activity
             startActivity(cruiseBookingsIntentObject)
         }
-
-        // BUGGY CODE BLOCK - BEGIN
-        // fetch cruise images from url using coroutines and store it on imageView
-//        GlobalScope.launch(Dispatchers.IO) {
-//            // N/w activity is ran on Background Thread
-//            // Error seems to be happening on this thread
-//
-//            val imageUrl =
-//                "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80"
-//            val url = URL(imageUrl)
-//            val connection = url.openConnection() as HttpURLConnection
-//            connection.doInput = true
-//            connection.connect()
-//
-//            val inputStream = connection.inputStream
-//            val bitmap = BitmapFactory.decodeStream(inputStream)
-//
-//            // Switching scope to Main Thread to access the View
-//            launch(Dispatchers.Main) {
-//        val imageView4 = findViewById<ImageView>(R.id.imageView4)
-//                imageView4.setImageBitmap(bitmap)
-//            }
-//        }
-        // END of buggy code block
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

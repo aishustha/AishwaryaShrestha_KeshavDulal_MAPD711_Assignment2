@@ -8,13 +8,18 @@
     tools:context=".ui.bahamas.BahamasFragment">
 
 
-<!--        android:src="@mipmap/bahamasimg"-->
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="250sp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-3dp" />
+<!--        android:src="@mipmap/bahamasimg"-->
+
+    <TextView
+        android:id="@+id/imageFetchStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <TextView
         android:id="@+id/text_bahamas"
