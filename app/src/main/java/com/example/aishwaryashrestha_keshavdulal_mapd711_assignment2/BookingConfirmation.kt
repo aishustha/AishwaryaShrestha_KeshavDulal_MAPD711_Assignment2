@@ -9,7 +9,10 @@ package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -17,7 +20,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.io.FileOutputStream
 import java.io.OutputStreamWriter
-
+@Suppress("DEPRECATION")
 class BookingConfirmation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +46,7 @@ class BookingConfirmation : AppCompatActivity() {
         // Display the results in a single textview
         val confirmationDetailsTV = findViewById<TextView>(R.id.confirmationDetailsTV)
 
+
         //print the values in a text view
         confirmationDetailsTV.text =
             "Customer Name: " + fullName + "\n" +
@@ -63,15 +67,21 @@ class BookingConfirmation : AppCompatActivity() {
                 outputWriter.write("\n\n")
                 outputWriter.write("\t\tThank you for booking your tour with us")
                 outputWriter.close()
-
+                //playSound()
                 //display file saved message
                 Toast.makeText(baseContext, "File saved successfully!", Toast.LENGTH_SHORT).show()
             }
             catch (e: Exception) {
                 e.printStackTrace()
             }
-        }
+            
+            //***************************ThankYou service called************************
+            //plays background thank you message service
+            Intent(this,ThankYouSoundService::class.java).also {
+                startService(it)
+            }
+        }//close btnPressed
 
-    }
-    }
+    }//close onCreate
+}
 
