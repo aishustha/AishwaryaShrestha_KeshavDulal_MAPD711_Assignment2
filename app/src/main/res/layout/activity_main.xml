@@ -17,12 +17,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="428dp"
+        android:layout_height="482dp"
         android:orientation="vertical"
         android:padding="24dp">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/signInTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -34,29 +34,27 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/emailEt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="25dp"
             android:background="@drawable/textfieldgrey"
             android:ems="10"
-            android:hint="Username"
-            android:inputType="textPersonName"
-            android:paddingStart="10dp"
-            android:text="Username" />
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/passwordEt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
             android:background="@drawable/textfieldgrey"
             android:ems="10"
             android:hint="Password"
-            android:inputType="textPersonName"
-            android:paddingStart="10dp"
-            android:text="Password" />
+            android:inputType="textPassword"
+            android:paddingStart="10dp" />
 
 
         <Button
@@ -83,40 +81,62 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#000"
                 android:layout_marginRight="20dp"
-                android:text="Don't have an account?" />
+                android:text="Don't have an account?"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/registerBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign up"
-                app:cornerRadius="50dp"
                 android:textColor="#fff"
                 android:textColorHighlight="#fff"
                 android:textColorHint="#fff"
                 android:textColorLink="#fff"
+                app:cornerRadius="50dp"
                 app:iconTint="#ffffff"
-                app:rippleColor="#000"
-                />
+                app:rippleColor="#000" />
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="48dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:minHeight="48dp"
-            android:onClick="toggleMusic"
-            app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:minHeight="50dp"
+                android:onClick="toggleMusic"
+                android:outlineAmbientShadowColor="#854040"
+                android:tintMode="src_in"
+                app:cornerRadius="100dp"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:text="Play Music"
+                android:layout_marginTop="14dp"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </LinearLayout>
+
 
     </LinearLayout>
 

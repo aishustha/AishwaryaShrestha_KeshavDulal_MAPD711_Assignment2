@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "723743929055",
+    "project_id": "cruise-ce355",
+    "storage_bucket": "cruise-ce355.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723743929055:android:7856704b5e0b636ab56f6a",
+        "android_client_info": {
+          "package_name": "com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723743929055-nabi4gc4hn1eio3nblctmna4o3r62br3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVHmaXVaPcbqMSGAAo62c3ztTvzcsUAJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723743929055-nabi4gc4hn1eio3nblctmna4o3r62br3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

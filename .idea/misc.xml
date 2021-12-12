@@ -24,9 +24,10 @@
         <entry key="app/src/main/res/drawable/textfieldgrey.xml" value="0.22870370370370371" />
         <entry key="app/src/main/res/layout/activity_booking_confirmation.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_customer_info.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4808362369337979" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.17763157894736842" />
         <entry key="app/src/main/res/layout/activity_payment.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_summary.xml" value="0.3637492608229304" />
         <entry key="app/src/main/res/layout/activity_travellers_counter.xml" value="0.3958333333333333" />
