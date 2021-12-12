@@ -17,12 +17,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val sendBtn = findViewById<Button>(R.id.sendBtn)
+        val signinBtn= findViewById<Button>(R.id.signinBtn)
+        val registerBtn = findViewById<Button>(R.id.registerBtn)
 
         //handle button click
-        sendBtn.setOnClickListener {
+        signinBtn.setOnClickListener {
             val intent = Intent(this@MainActivity, BookingActivity::class.java)
+
+            //sending data to second activity
+            startActivity(intent)
+        }
+
+        //handle button click
+        registerBtn.setOnClickListener {
+            val intent = Intent(this@MainActivity, Register::class.java)
 
             //sending data to second activity
             startActivity(intent)
