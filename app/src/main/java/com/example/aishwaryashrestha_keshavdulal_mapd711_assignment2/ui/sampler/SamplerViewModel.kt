@@ -11,7 +11,9 @@ class SamplerViewModel : ViewModel() {
                 "calendar or a disobliging budget? Those days are over! Thanks to a little something the " +
                 "industry likes to call ‘sampler cruises’ holidaymakers can enjoy whirlwind at-sea getaways " +
                 "that last a matter of days. Want to know more? Read on for our insider’s guide to sampler " +
-                "cruises and what makes them so popular."
+                "cruises and what makes them so popular."+
+                "Duration: 6 Nights" +
+                "Price: $2300/person"
     }
     val text: LiveData<String> = _text
 }

@@ -13,7 +13,9 @@ class StarViewModel : ViewModel() {
                 "for the ninth year in 2016, in recognition of winning “Best Cruise Operator in the Asia-Pacific” " +
                 "for 10 consecutive years. " +
                 "Star Cruises was also recently voted “Asia’s Leading Cruise Line” at the World Travel " +
-                "sAwards for the fifth year in a row in 2016."
+                "sAwards for the fifth year in a row in 2016."+
+                "Duration: 7 Nights" +
+                "Price: $2400/person"
     }
     val text: LiveData<String> = _text
 }

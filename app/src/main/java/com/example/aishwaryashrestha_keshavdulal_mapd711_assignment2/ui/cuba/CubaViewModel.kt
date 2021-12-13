@@ -11,7 +11,9 @@ class CubaViewModel : ViewModel() {
                 "there are hundreds of years of historical buildings and places to explore. " +
                 "Visit Bermuda to discover the colonial roots of these vibrant cities, " +
                 "where cultures collide into a distinctive mix of European and indigenous " +
-                "influences you won't find replicated anywhere in the world."
+                "influences you won't find replicated anywhere in the world."+
+                "Duration: 5 Nights" +
+                "Price: $2200/person"
     }
     val text: LiveData<String> = _text
 }

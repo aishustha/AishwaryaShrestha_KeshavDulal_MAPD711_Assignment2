@@ -14,7 +14,9 @@ class BahamasViewModel : ViewModel() {
                 "majestic coral garden at Orange Bowl reef, hang out at ultra-luxurious resorts like " +
                 "Atlantis, and shop resort fashion in Paradise Island or Nassau. The Bahamas " +
                 "has an island for every taste and style, and it's easy to enjoy its subtropical " +
-                "charm during an overnight stint or a week-long cruise."
+                "charm during an overnight stint or a week-long cruise." +
+                "Duration: 4 Nights" +
+                "Price: $1900/person"
     }
     val text: LiveData<String> = _text
 }

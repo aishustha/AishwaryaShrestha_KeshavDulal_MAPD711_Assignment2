@@ -22,7 +22,9 @@ class CaribbeanViewModel : ViewModel() {
                 "of Belize, or boost your adrenaline as you zip-line through the treetops of Labadee or Honduras. " +
                 "If calm, contemplative nature is more your thing, " +
                 "spend the day admiring cascading waterfalls in Jamaica and the " +
-                "vivid coral reefs of Bonaire, home to manta rays and parrot fish."
+                "vivid coral reefs of Bonaire, home to manta rays and parrot fish."+
+                "Duration: 5 Nights" +
+                "Price: $2100/person"
     }
     val text: LiveData<String> = _text
 
