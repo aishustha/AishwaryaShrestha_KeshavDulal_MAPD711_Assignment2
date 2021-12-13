@@ -15,33 +15,51 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
         android:text="@string/textviewConfirmation"
+        android:textColor="#000"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:textColor="#000"
         android:text="@string/confirmation_message"
-        android:textSize="40dp" />
+        android:textSize="32dp" />
+
 
     <Button
         android:id="@+id/printbtn"
-        android:onClick="print_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
-        android:text="@string/save_data_to_text_file" />
+        android:text="Save Data To File"
+        android:textColor="#fff"
+        android:textColorHighlight="#fff"
+        android:textColorHint="#fff"
+        android:textColorLink="#fff"
+        android:layout_marginBottom="40dp"
+        app:cornerRadius="50dp" />
+
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="64dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="20dp"
-        android:background="@color/black"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="15dp"
+        android:minHeight="50dp"
         android:onClick="toggleMusic"
+        android:outlineAmbientShadowColor="#854040"
+        android:tintMode="src_in"
+        app:cornerRadius="100dp"
         app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:tint="#000000" />
+
 </LinearLayout>

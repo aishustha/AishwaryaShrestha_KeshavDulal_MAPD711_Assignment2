@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,6 +16,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
         android:text="@string/travellers_count"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:textSize="20sp" />
 
     <TextView
@@ -24,6 +27,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:text="@string/travellers_counter_adults" />
 
     <Spinner
@@ -33,6 +38,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:entries="@array/counter" />
 
     <TextView
@@ -42,6 +49,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:text="@string/travellers_counter_kids" />
 
     <Spinner
@@ -51,6 +60,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:entries="@array/counter" />
 
     <TextView
@@ -60,6 +71,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:text="@string/peopleOver60" />
 
     <RadioButton
@@ -68,6 +81,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:text="@string/yes" />
 
     <!--    <TextView-->
@@ -87,15 +102,23 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
         android:text="@string/no" />
 
     <Button
         android:id="@+id/travellersCountContinueBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
-        android:text="@string/continue_text" />
+        android:text="Continue"
+        android:textColor="#fff"
+        android:textColorHighlight="#fff"
+        android:textColorHint="#fff"
+        android:textColorLink="#fff"
+        app:cornerRadius="50dp" />
 
 
 
