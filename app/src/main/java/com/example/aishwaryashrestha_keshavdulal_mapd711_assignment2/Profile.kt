@@ -7,9 +7,12 @@ import android.widget.Button
 import androidx.appcompat.app.ActionBar
 import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class Profile : AppCompatActivity() {
+
+
     //ViewBinding
     private lateinit var binding: ActivityProfileBinding
 
@@ -19,7 +22,8 @@ class Profile : AppCompatActivity() {
     //FirebaseAuth
     private lateinit var firebaseAuth: FirebaseAuth
 
-    private lateinit var firebaseData: FirebaseDatabase
+    private lateinit var database: DatabaseReference
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +48,8 @@ class Profile : AppCompatActivity() {
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
+
+
 
         //handle click, logout
         binding.logoutBtn.setOnClickListener{
