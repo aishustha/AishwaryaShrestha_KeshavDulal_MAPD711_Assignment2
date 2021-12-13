@@ -28,34 +28,6 @@
                 android:textSize="32dp"
                 android:textStyle="bold"  />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/username_lbl"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="12dp"-->
-<!--            android:textColor="#000"-->
-<!--            android:textSize="18dp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:text="Username"/>-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/inputUsername"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            android:background="@drawable/textfieldgrey"-->
-<!--            android:ems="10"-->
-<!--            android:hint="Username"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="10dp" />-->
-<!--    </LinearLayout>-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,8 +54,7 @@
             android:inputType="textEmailAddress"
             android:paddingStart="10dp" />
     </LinearLayout>
-
-            <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -108,164 +79,192 @@
             android:paddingStart="10dp" />
     </LinearLayout>
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-<!--        <TextView-->
-<!--            android:id="@+id/firstname_lbl"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="First Name"-->
-<!--            android:layout_marginBottom="12dp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="#000"-->
-<!--            android:textSize="18dp" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/inputFirstName"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            android:background="@drawable/textfieldgrey"-->
-<!--            android:ems="10"-->
-<!--            android:hint="First Name"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="10dp" />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-<!--        <TextView-->
-<!--            android:id="@+id/lastname_lbl"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Last Name"-->
-<!--            android:layout_marginBottom="12dp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="#000"-->
-<!--            android:textSize="18dp" />-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/inputLastName"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            android:background="@drawable/textfieldgrey"-->
-<!--            android:ems="10"-->
-<!--            android:hint="Last Name"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="10dp" />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-<!--        <TextView-->
-<!--            android:id="@+id/address_lbl"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Address"-->
-<!--            android:layout_marginBottom="12dp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="#000"-->
-<!--            android:textSize="18dp" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
-<!--        <EditText-->
-<!--            android:id="@+id/inputAddress"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            android:background="@drawable/textfieldgrey"-->
-<!--            android:ems="10"-->
-<!--            android:hint="Address"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="10dp" />-->
-<!--    </LinearLayout>-->
+        <TextView
+            android:id="@+id/username_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Username"/>
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-<!--        <TextView-->
-<!--            android:id="@+id/city_lbl"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="City"-->
-<!--            android:layout_marginBottom="12dp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="#000"-->
-<!--            android:textSize="18dp" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/inputCity"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            android:background="@drawable/textfieldgrey"-->
-<!--            android:ems="10"-->
-<!--            android:hint="City"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="10dp" />-->
+        <EditText
+            android:id="@+id/inputUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+    </LinearLayout>
 
-<!--    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/firstname_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/inputFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-<!--        <TextView-->
-<!--            android:id="@+id/postalCode_lbl"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Postal Code"-->
-<!--            android:layout_marginBottom="12dp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="#000"-->
-<!--            android:textSize="18dp" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/lastname_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/inputLastName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/address_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
 
 
-<!--        <EditText-->
-<!--            android:id="@+id/inputPostalCode"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            android:background="@drawable/textfieldgrey"-->
-<!--            android:ems="10"-->
-<!--            android:hint="Postal Code"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="10dp" />-->
-<!--    </LinearLayout>-->
+        <EditText
+            android:id="@+id/inputAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+    </LinearLayout>
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-<!--        <TextView-->
-<!--            android:id="@+id/telephone_lbl"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Telephone"-->
-<!--            android:layout_marginBottom="12dp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="#000"-->
-<!--            android:textSize="18dp" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/city_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/inputCity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="City"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
 
-<!--        <EditText-->
-<!--            android:id="@+id/inputTelephone"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            android:background="@drawable/textfieldgrey"-->
-<!--            android:ems="10"-->
-<!--            android:hint="Telephone"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingStart="10dp" />-->
-<!--    </LinearLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/postalCode_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Postal Code"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+
+        <EditText
+            android:id="@+id/inputPostalCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="Postal Code"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/telephone_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telephone"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/inputTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/textfieldgrey"
+            android:ems="10"
+            android:hint="Telephone"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+    </LinearLayout>
 
 
 

@@ -22,6 +22,15 @@
         android:text="Email"
         />
 
+
+    <TextView
+        android:id="@+id/usernameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        />
+
+
     <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
