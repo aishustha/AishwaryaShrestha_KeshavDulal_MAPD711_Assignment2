@@ -72,42 +72,16 @@ class Register : AppCompatActivity() {
         pname = findViewById(R.id.inputPostalCode)
         cname = findViewById(R.id.inputCity)
         tname = findViewById(R.id.inputTelephone)
-
+        val inputUsername = findViewById<EditText>(R.id.inputUsername)
 
         //handle click, begin signup
         binding.buttonRegister.setOnClickListener {
             //validate data
             validateData()
             saveUserData()
-
-            val username: String = binding.inputUsername.text.toString()
-
-            if(username.isEmpty()) {
-                readData(username)
-            }
-
-            else {
-                Toast.makeText(this, "Please enter username", Toast.LENGTH_SHORT).show()
-            }
         }
     }
 
-
-    private fun readData(username: String)  {
-        database = FirebaseDatabase.getInstance().getReference("Users")
-        database.child(username).get().addOnSuccessListener {
-            if(it.exists()){
-                val userName = it.child("username").value
-                val firstName = it.child("firstname").value
-                val lastName = it.child("lastname").value
-                Toast.makeText(this, "Successfully Read", Toast.LENGTH_SHORT).show()
-            }
-
-            else {
-                Toast.makeText(this, "User doesn't exist", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
 
     private fun saveUserData() {
         val username = uname.text.toString().trim()
@@ -169,7 +143,7 @@ class Register : AppCompatActivity() {
         val data = Data(dataId, username, firstname, lastname, city, address, postalcode, telephone  )
 
         ref.child(dataId.toString()).setValue(data).addOnCompleteListener {
-            Toast.makeText(applicationContext, "data saved successfully", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "Data Saved Successfully", Toast.LENGTH_LONG).show()
         }
 
     }

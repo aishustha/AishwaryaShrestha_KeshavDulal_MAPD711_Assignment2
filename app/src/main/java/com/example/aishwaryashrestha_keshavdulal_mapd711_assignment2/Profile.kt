@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -29,6 +30,7 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val bookBtn= findViewById<Button>(R.id.bookBtn)
 
