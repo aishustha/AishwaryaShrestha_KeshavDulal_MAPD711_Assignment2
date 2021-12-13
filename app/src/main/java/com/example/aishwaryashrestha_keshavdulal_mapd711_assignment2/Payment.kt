@@ -9,10 +9,9 @@
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 
 class payment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +32,19 @@ class payment : AppCompatActivity() {
         continueBtn.setOnClickListener {
 
             // Initialize intent object to pass data
-            val myIntentObject = Intent(this@payment, CustomerInfo::class.java)
+//            val myIntentObject = Intent(this@payment, CustomerInfo::class.java)
+            val myIntentObject = Intent(this@payment, BookingConfirmation::class.java)
+
+
+//            aishwaryashrestha222@gmail.com
+            // Store user inputs in the newly created intent object
+//            myIntentObject.putExtra("fullName", fullName)
+//            myIntentObject.putExtra("address", address)
+//            myIntentObject.putExtra("city", city)
+//            myIntentObject.putExtra("country", country)
+//            myIntentObject.putExtra("postalCode", postalCode)
+//            myIntentObject.putExtra("telephone", telephone)
+//            myIntentObject.putExtra("email", email)
 
             myIntentObject.putExtra("bookedCruise", bookedCruise)
             myIntentObject.putExtra("totalGuests", totalGuests)
