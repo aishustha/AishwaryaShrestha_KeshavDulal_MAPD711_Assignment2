@@ -11,8 +11,8 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment2.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
 
 class Register : AppCompatActivity() {
 
@@ -23,6 +23,7 @@ class Register : AppCompatActivity() {
     lateinit var aname: EditText
     lateinit var pname: EditText
     lateinit var tname: EditText
+
 
 
 
@@ -37,6 +38,8 @@ class Register : AppCompatActivity() {
 
     //FirebaseAuth
     private lateinit var firebaseAuth: FirebaseAuth
+
+    private lateinit var database: DatabaseReference
 
     private var email = ""
     private var password = ""
@@ -77,6 +80,32 @@ class Register : AppCompatActivity() {
             validateData()
             saveUserData()
 
+            val username: String = binding.inputUsername.text.toString()
+
+            if(username.isEmpty()) {
+                readData(username)
+            }
+
+            else {
+                Toast.makeText(this, "Please enter username", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
+    private fun readData(username: String)  {
+        database = FirebaseDatabase.getInstance().getReference("Users")
+        database.child(username).get().addOnSuccessListener {
+            if(it.exists()){
+                val userName = it.child("username").value
+                val firstName = it.child("firstname").value
+                val lastName = it.child("lastname").value
+                Toast.makeText(this, "Successfully Read", Toast.LENGTH_SHORT).show()
+            }
+
+            else {
+                Toast.makeText(this, "User doesn't exist", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -142,6 +171,7 @@ class Register : AppCompatActivity() {
         ref.child(dataId.toString()).setValue(data).addOnCompleteListener {
             Toast.makeText(applicationContext, "data saved successfully", Toast.LENGTH_LONG).show()
         }
+
     }
 
     private fun validateData() {
