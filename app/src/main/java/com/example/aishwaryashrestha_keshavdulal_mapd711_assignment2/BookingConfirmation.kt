@@ -117,37 +117,37 @@ class BookingConfirmation : AppCompatActivity() {
     }
 
     private fun readData(username: String) {
-        val databaseRef = FirebaseDatabase.getInstance().getReference("data")
 //        val databaseRef = FirebaseDatabase.getInstance().getReference("data")
-//        databaseRef.child(username.toString()).get().addOnSuccessListener {
-//            if(it.exists()){
-//                userName = it.child("username").value.toString()
-//                val firstName = it.child("firstname").value.toString()
-//                val lastName = it.child("lastname").value.toString()
-//                fullName= firstName + lastName
-//                address = it.child("address").value.toString()
-//                city = it.child("city").value.toString()
-//                Toast.makeText(this, "Successfully Read", Toast.LENGTH_SHORT).show()
-//            }
-//
-//            else {
-//                Toast.makeText(this, "UserInfo Fetch Failed", Toast.LENGTH_SHORT).show()
-//            }
-//        }
+        val databaseRef = FirebaseDatabase.getInstance().getReference("data")
+        databaseRef.child(username.toString()).get().addOnSuccessListener {
+            if(it.exists()){
+                userName = it.child("username").value.toString()
+                val firstName = it.child("firstname").value.toString()
+                val lastName = it.child("lastname").value.toString()
+                fullName= firstName + lastName
+                address = it.child("address").value.toString()
+                city = it.child("city").value.toString()
+                Toast.makeText(this, "Successfully Read", Toast.LENGTH_SHORT).show()
+            }
+
+            else {
+                Toast.makeText(this, "UserInfo Fetch Failed", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         // ------------------------
-        val docRef = databaseRef.collection("data").document("SF")
-        docRef.get()
-            .addOnSuccessListener { document ->
-                if (document != null) {
-                    Log.d(TAG, "DocumentSnapshot data: ${document.data}")
-                } else {
-                    Log.d(TAG, "No such document")
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.d(TAG, "get failed with ", exception)
-            }
+//        val docRef = databaseRef.collection("data").document("SF")
+//        docRef.get()
+//            .addOnSuccessListener { document ->
+//                if (document != null) {
+//                    Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+//                } else {
+//                    Log.d(TAG, "No such document")
+//                }
+//            }
+//            .addOnFailureListener { exception ->
+//                Log.d(TAG, "get failed with ", exception)
+//            }
 
     }
 

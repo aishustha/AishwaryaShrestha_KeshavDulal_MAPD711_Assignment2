@@ -26,6 +26,7 @@ class CustomerInfo : AppCompatActivity() {
         val duration = intent.getStringExtra("duration")
 
         // Store EditText field's references
+        val inputUsername = findViewById<EditText>(R.id.inputUsername)
         val fullNameET = findViewById<EditText>(R.id.fullNameET)
         val addressET = findViewById<EditText>(R.id.addressET)
         val cityET = findViewById<EditText>(R.id.cityET)
@@ -40,6 +41,7 @@ class CustomerInfo : AppCompatActivity() {
         // Add clickListener to button
         reserveBtn.setOnClickListener {
             // collect data from EditText field's references stored above
+            val username = inputUsername.text.toString()
             val fullName = fullNameET.text.toString()
             val address = addressET.text.toString()
             val city = cityET.text.toString()
@@ -53,6 +55,7 @@ class CustomerInfo : AppCompatActivity() {
             val myIntentObject = Intent(this@CustomerInfo, BookingConfirmation::class.java)
 
             // Store user inputs in the newly created intent object
+            myIntentObject.putExtra("userName", username)
             myIntentObject.putExtra("fullName", fullName)
             myIntentObject.putExtra("address", address)
             myIntentObject.putExtra("city", city)
